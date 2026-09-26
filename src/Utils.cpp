@@ -30,8 +30,7 @@ std::string	toUpper(const std::string &str)
 	std::string	result(str);
 
 	for (std::string::size_type i = 0; i < result.size(); ++i)
-		result[i] = static_cast<char>(
-			std::toupper(static_cast<unsigned char>(result[i])));
+		result[i] = static_cast<char>(std::toupper(static_cast<unsigned char>(result[i])));
 	return (result);
 }
 
@@ -114,8 +113,7 @@ bool	isValidNickname(const std::string &nickname)
 {
 	if (nickname.empty() || nickname.size() > g_maxNickLength)
 		return (false);
-	if (!std::isalpha(static_cast<unsigned char>(nickname[0]))
-		&& std::string(g_nickSpecial).find(nickname[0]) == std::string::npos)
+	if (!std::isalpha(static_cast<unsigned char>(nickname[0])) && std::string(g_nickSpecial).find(nickname[0]) == std::string::npos)
 		return (false);
 	for (std::string::size_type i = 1; i < nickname.size(); ++i)
 	{
