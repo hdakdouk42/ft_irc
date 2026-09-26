@@ -1,9 +1,0 @@
-# build output
-obj/
-ircserv
-
-# editor / OS noise
-*.o
-*.d
-*.swp
-.DS_Store
